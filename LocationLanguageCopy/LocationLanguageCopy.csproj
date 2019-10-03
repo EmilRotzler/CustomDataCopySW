@@ -1,0 +1,1805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0560B07-4E92-4C3B-B393-7F68547984B2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LocationLanguageCopy</RootNamespace>
+    <AssemblyName>LocationLanguageCopy</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\SmartwebApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SmartWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Creds.cs" />
+    <Compile Include="Language.cs" />
+    <Compile Include="LocationCopy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="App.config" />
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.CategoryPicture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_CreateOrUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_CreatePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_DeletePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_GetPicturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_UpdatePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Category_UpdateTitleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Currency.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Currency_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Currency_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Currency_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Currency_GetByIsoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Currency_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.CustomDataType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Delivery.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Delivery_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Delivery_GetByLocationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Delivery_UpdateDropPointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Discount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroupProduct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroupProduct_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroupProduct_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroupProduct_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroupProduct_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroupProduct_GetByTitleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroupProduct_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroup_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroup_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroup_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroup_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroup_GetByTitleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.DiscountGroup_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Discount_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Discount_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Discount_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Discount_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Discount_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.NewsletterCustomField.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Newsletter_DeleteCustomFieldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Newsletter_GetCustomFieldByGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Newsletter_GetCustomFieldByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderCurrency.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderCustomer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderDelivery.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderDiscountCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderFileDownload.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderLine.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderLineAddress.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderPacking.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderPayment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderStatusCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderStatusCode_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.OrderTransaction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_CancelTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_CompleteTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_CreateInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetByDateAndUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetByDateUpdatedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetByNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetBySiteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetByStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetCurrencyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetDiscountCodesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetFileDownloadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetLineAddressesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetPackingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_GetTransactionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_LowerTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_SendMailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_SetFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_SetOrderLineFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_SetTransactionCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_UpdateCommentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_UpdateLineStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_UpdateLineTrackingCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_UpdateSiteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_UpdateStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Order_UpdateTrackingCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PagePicture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PageText.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PageText_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PageText_GetByFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PageText_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PageText_GetByIdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PageText_GetByLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PageText_SetFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PageText_SetThumbOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PageText_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Page_GetPicturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Page_GetPictureThumbnailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.PaymentMethod.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Payment_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Payment_GetByCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductAdditional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductAdditionalType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductCustomData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductCustomDataType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductDeliveryCountry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductDeliveryTime.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductDiscount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductDiscountAccumulative.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductExtraBuyCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductExtraBuyRelation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductPicture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductTag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductUnit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductVariant.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductVariantType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ProductVariantTypeValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_AddAdditionalTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_AddCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateDeliveryCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateDeliveryTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateDiscountAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateExtraBuyRelationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateOrUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateOrUpdateVariantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateOrUpdateVariantTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateOrUpdateVariantTypeValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreatePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_CreateVariantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteAllDiscountAccumulativeByProductGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteAllDiscountAccumulativesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteAllDiscountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteDeliveryCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteDeliveryTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteDiscountAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteExtraBuyRelationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeletePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_DeleteVariantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetAdditionalsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetAdditionalTypesAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetAdditionalTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetAllExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetAllWithLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetByBrandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetByCategoryAndSecondaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetByCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetByIdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetByItemNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetByUpdatedDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetCustomDataAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetCustomDataByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetCustomDataByTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetCustomDataTypeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDeliveryCountryAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDeliveryCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDeliveryTimeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDeliveryTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDiscountAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDiscountGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDiscountsAccumulativeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDiscountsAccumulativeByProductGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDiscountsAccumulativeByUserGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDiscountsAccumulativeByUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDiscountsAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetDiscountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetExtraBuyRelationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetFilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetPicturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetSecondaryCategoriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetTagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetUnitAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetUnitByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetVariantByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetVariantsByItemNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetVariantsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetVariantTypeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetVariantTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetVariantTypeValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetVariantTypeValuesByTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_GetVariantTypeValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_RemoveAdditionalTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_RemoveCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_SearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_SetFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_SetVariantFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateCustomTextDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateDeliveryCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateDeliveryTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateDiscountAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateExtraBuyRelationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdatePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateVariantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateVariantTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Product_UpdateVariantTypeValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.SEORedirect.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.SEORedirect_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.SEORedirect_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.SEORedirect_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.ShopWebinfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Site.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Sites_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Sites_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.SolutionLanguage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_ConnectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_CreateCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_CreateCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_CreateThumbResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_CreateThumbsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_DeleteCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_DeleteCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_GetCustomDataTypeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_GetLanguagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_GetWebinfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_HasModuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_SetCaseSensitiveItemNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_SetEncodingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_SetLanguageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_UpdateCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.Solution_UpdateCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.UserGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_AddCustomDataBindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_CreateGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_CreateOrUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_DeleteGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_GetAllByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_GetAllNewsletterByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_GetAllNewsletterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_GetByGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_GetByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_GetGroupAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_GetGroupByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_RemoveCustomDataBindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_SetFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_UpdateCustomDataTextBindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_UpdateGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.User_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.VatGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.VatGroup_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.VatGroup_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.VatGroup_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.VatGroup_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\LocationLanguageCopy.SmartwebApi.VatGroup_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartwebApi\WebService.wsdl" />
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.CategoryPicture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_CreateOrUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_CreatePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_DeletePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_GetPicturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_UpdatePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Category_UpdateTitleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Currency.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Currency_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Currency_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Currency_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Currency_GetByIsoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Currency_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.CustomDataType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Delivery.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Delivery_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Delivery_GetByLocationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Delivery_UpdateDropPointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Discount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroupProduct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroupProduct_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroupProduct_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroupProduct_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroupProduct_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroupProduct_GetByTitleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroupProduct_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroup_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroup_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroup_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroup_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroup_GetByTitleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.DiscountGroup_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Discount_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Discount_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Discount_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Discount_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Discount_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.NewsletterCustomField.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Newsletter_DeleteCustomFieldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Newsletter_GetCustomFieldByGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Newsletter_GetCustomFieldByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderCurrency.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderCustomer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderDelivery.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderDiscountCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderFileDownload.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderLine.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderLineAddress.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderPacking.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderPayment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderStatusCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderStatusCode_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.OrderTransaction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_CancelTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_CompleteTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_CreateInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetByDateAndUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetByDateUpdatedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetByNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetBySiteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetByStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetCurrencyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetDiscountCodesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetFileDownloadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetLineAddressesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetPackingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_GetTransactionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_LowerTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_SendMailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_SetFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_SetOrderLineFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_SetTransactionCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_UpdateCommentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_UpdateLineStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_UpdateLineTrackingCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_UpdateSiteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_UpdateStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Order_UpdateTrackingCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PagePicture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PageText.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PageText_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PageText_GetByFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PageText_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PageText_GetByIdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PageText_GetByLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PageText_SetFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PageText_SetThumbOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PageText_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Page_GetPicturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Page_GetPictureThumbnailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.PaymentMethod.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Payment_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Payment_GetByCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductAdditional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductAdditionalType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductCustomData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductCustomDataType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductDeliveryCountry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductDeliveryTime.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductDiscount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductDiscountAccumulative.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductExtraBuyCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductExtraBuyRelation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductPicture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductTag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductUnit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductVariant.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductVariantType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ProductVariantTypeValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_AddAdditionalTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_AddCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateDeliveryCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateDeliveryTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateDiscountAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateExtraBuyRelationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateOrUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateOrUpdateVariantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateOrUpdateVariantTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateOrUpdateVariantTypeValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreatePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_CreateVariantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteAllDiscountAccumulativeByProductGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteAllDiscountAccumulativesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteAllDiscountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteDeliveryCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteDeliveryTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteDiscountAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteExtraBuyRelationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeletePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_DeleteVariantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetAdditionalsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetAdditionalTypesAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetAdditionalTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetAllExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetAllWithLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetByBrandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetByCategoryAndSecondaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetByCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetByIdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetByItemNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetByUpdatedDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetCustomDataAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetCustomDataByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetCustomDataByTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetCustomDataTypeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDeliveryCountryAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDeliveryCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDeliveryTimeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDeliveryTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDiscountAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDiscountGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDiscountsAccumulativeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDiscountsAccumulativeByProductGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDiscountsAccumulativeByUserGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDiscountsAccumulativeByUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDiscountsAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetDiscountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetExtraBuyRelationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetFilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetPicturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetSecondaryCategoriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetTagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetUnitAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetUnitByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetVariantByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetVariantsByItemNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetVariantsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetVariantTypeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetVariantTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetVariantTypeValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetVariantTypeValuesByTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_GetVariantTypeValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_RemoveAdditionalTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_RemoveCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_SearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_SetFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_SetVariantFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateCustomTextDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateDeliveryCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateDeliveryTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateDiscountAccumulativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateExtraBuyCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateExtraBuyRelationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdatePictureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateVariantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateVariantTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Product_UpdateVariantTypeValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.SEORedirect.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.SEORedirect_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.SEORedirect_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.SEORedirect_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.ShopWebinfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Site.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Sites_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Sites_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.SolutionLanguage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_ConnectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_CreateCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_CreateCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_CreateThumbResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_CreateThumbsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_DeleteCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_DeleteCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_GetCustomDataTypeAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_GetLanguagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_GetWebinfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_HasModuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_SetCaseSensitiveItemNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_SetEncodingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_SetLanguageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_UpdateCustomDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.Solution_UpdateCustomDataTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.UserGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_AddCustomDataBindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_CreateGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_CreateOrUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_DeleteGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_GetAllByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_GetAllNewsletterByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_GetAllNewsletterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_GetByGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_GetByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_GetGroupAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_GetGroupByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_RemoveCustomDataBindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_SetFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_UpdateCustomDataTextBindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_UpdateGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.User_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.VatGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.VatGroup_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.VatGroup_DeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.VatGroup_GetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.VatGroup_GetByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\LocationLanguageCopy.SmartWeb.VatGroup_UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmartWeb\WebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SmartwebApi\" />
+    <WCFMetadataStorage Include="Connected Services\SmartWeb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmartWeb\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmartWeb\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmartWeb\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmartwebApi\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmartwebApi\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmartwebApi\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
